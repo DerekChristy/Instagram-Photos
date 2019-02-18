@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper black">
+            <a id="logo" href="#" class="brand-logo" style="padding-left: 15px;"><i class="small material-icons">camera_alt</i>Instagram Photos</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="row" style="display: flex; flex-wrap: wrap;">
+            <% grams.forEach(function(gram) { %>
+            <div class="col s12 m6 l4">
+              <div class="card hoverable">
+                <div class="card-image">
+                  <img src="<%= gram.images.standard_resolution.url %>">
+                </div>
+                <div class="card-content">
+                  <pre class=" valign-wrapper "><i class="small material-icons">thumb_up</i> <%= gram.likes.count%>   <i class="small material-icons">chat_bubble</i> <%= gram.comments.count%></pre>
+                </div>
+              </div>
+            </div>
+            <% }); %>
+          </div>
+    </main>
+</body>
+</html>
