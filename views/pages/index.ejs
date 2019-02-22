@@ -6,10 +6,9 @@
 <body>
     <nav>
         <div class="nav-wrapper black">
-            <a id="logo" href="#" class="brand-logo" style="padding-left: 15px;"><i class="small material-icons">camera_alt</i>Instagram Photos</a>
+            <a id="logo" href="#" class="brand-logo" style="padding-left: 15px;"><i class="small material-icons">camera_alt</i>Insta-Pics</a>
         </div>
     </nav>
-
     <main class="container">
         <div class="row" style="display: flex; flex-wrap: wrap;">
             <% grams.forEach(function(gram) { %>
@@ -26,5 +25,9 @@
             <% }); %>
           </div>
     </main>
+
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
 </body>
 </html>
